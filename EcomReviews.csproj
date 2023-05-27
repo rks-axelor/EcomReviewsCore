@@ -14,22 +14,20 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="RestSharp" Version="105.2.3" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="ErrorLogs">
-      <HintPath>C:\Users\admin\Downloads\ErrorLogs.dll</HintPath>
+      <HintPath>DLLS\ErrorLogs.dll</HintPath>
     </Reference>
     <Reference Include="LocobuzzTelemetry">
-      <HintPath>D:\InstaDm\InstagramDM\bin\Debug\LocobuzzTelemetry.dll</HintPath>
-    </Reference>
-    <Reference Include="RestSharp">
-      <HintPath>..\..\..\Downloads\RestSharp.dll</HintPath>
+      <HintPath>DLLS\LocobuzzTelemetry.dll</HintPath>
     </Reference>
     <Reference Include="TaggingBLL">
-      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\TaggingBLL\v4.0_1.0.0.0__a2bcff66088e5c27\TaggingBLL.dll</HintPath>
+      <HintPath>DLLS\TaggingBLL.dll</HintPath>
     </Reference>
   </ItemGroup>
 
