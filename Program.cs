@@ -28,22 +28,17 @@ class Program
         {
             lstBrands = lstBrands.Where(b => b.BrandID == Convert.ToInt64(BrandID)).ToList();
         }
+        Console.WriteLine("Brand Found :"+lstBrands.Count); 
         foreach (BrandDetails brand in lstBrands)
         {
+            Console.WriteLine("Running For Brand :" + brand.BrandName);
             List<ProductDetails> lstProducts = DatabaseOperations.GetProductList(brand);
+            Console.WriteLine("Product Found :" + lstProducts.Count);
             foreach (ProductDetails product in lstProducts)
             {
+                Console.WriteLine("Running For Product");
                 if (!CheckThreadStatus_Main(product.ProductID))
                 {
-
-                    /*if (product.JobID == 0 && Convert.ToInt32(AppSettings.ServiceType) == 1)
-                    {
-                        BusinessLogics.GetJobID(product, brand);//Testing Purpose
-                    }
-                    else if(product.JobID != 0 && Convert.ToInt32(AppSettings.ServiceType) == 2)
-                    {
-                        BusinessLogics.GetEcomReviews(product, brand);//Testing Purpose
-                    }*/
                     StartThread:
                         if (lstrunthreads.Count < Convert.ToInt32(AppSettings.ThreadCount))
                         {
@@ -76,8 +71,11 @@ class Program
                             goto StartThread;
                         }    
                 }
+                Console.WriteLine("Completed For Brand "+brand.BrandName);
             }
         }
+        Console.WriteLine("First Iteration Completed");
+        Console.ReadLine();
     }
     public static bool CheckThreadStatus_Main(long ID)
     {

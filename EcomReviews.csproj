@@ -26,6 +26,9 @@
     <Reference Include="LocobuzzTelemetry">
       <HintPath>DLLS\LocobuzzTelemetry.dll</HintPath>
     </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>DLLS\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="TaggingBLL">
       <HintPath>DLLS\TaggingBLL.dll</HintPath>
     </Reference>
