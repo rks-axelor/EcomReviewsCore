@@ -29,7 +29,7 @@ class Program
             lstBrands = lstBrands.Where(b => b.BrandID == Convert.ToInt64(BrandID)).ToList();
         }
         Console.WriteLine("Brand Found :"+lstBrands.Count);
-        Console.WriteLine("Checking for Raja (Subash)");
+        Console.WriteLine("Checking for Ritesh");
         foreach (BrandDetails brand in lstBrands)
         {
             Console.WriteLine("Running For Brand :" + brand.BrandName);
