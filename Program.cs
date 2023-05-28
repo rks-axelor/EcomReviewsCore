@@ -29,7 +29,7 @@ class Program
             lstBrands = lstBrands.Where(b => b.BrandID == Convert.ToInt64(BrandID)).ToList();
         }
         Console.WriteLine("Brand Found :"+lstBrands.Count);
-        Console.WriteLine("Checking for datetime correction");
+        Console.WriteLine("DateTime is still noyt working");
         foreach (BrandDetails brand in lstBrands)
         {
             Console.WriteLine("Running For Brand :" + brand.BrandName);
